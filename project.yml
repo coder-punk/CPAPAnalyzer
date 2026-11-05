@@ -1,0 +1,23 @@
+
+name: CPAPAnalyzer
+options:
+  bundleIdPrefix: com.cpaptools
+targets:
+  CPAPAnalyzer:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: .
+        excludes:
+          - ".github"
+          - "README.md"
+          - "project.yml"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.cpaptools.CPAPAnalyzer
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription: "Bluetooth wordt gebruikt om CPAP-apparaten te ontdekken."
+        CODE_SIGNING_ALLOWED: NO
